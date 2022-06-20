@@ -7,7 +7,7 @@ let colorSelected;
 function addR() {
     // get grid
     let grid = document.getElementById("grid")
-    // create rows and columns
+    // create rows and columns, elements based off style sheet
     let col = document.createElement("td")
     let row = document.createElement("tr")
 
