@@ -134,6 +134,7 @@ function fillU(){
 function fillAll(){
     // grabs all the boxes on the grid
     let allBoxes = document.querySelectorAll("td")
+    // make all boxes the selected color
     allBoxes.forEach(box => {
         box.style.backgroundColor = colorSelected;
     })
@@ -141,5 +142,10 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    // grabs all the boxes on the grid
+    let allBoxes = document.querySelectorAll("td")
+    // take off color off all boxes
+    allBoxes.forEach(box => {
+        box.style.backgroundColor = "";
+    })
 }
