@@ -34,7 +34,30 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    // get grid
+    let grid = document.getElementById("grid")
+    // create rows and columns, elements based off style sheet
+    let col = document.createElement("td")
+    let row = document.createElement("tr")
+
+    // Adding first box with 0 rows and 0 columns
+    if(numRows === 0) {
+        col.appendChild(row)
+        grid.appendChild(col)
+
+        //update rows
+        numRows++
+    }
+    // add corresponding columnds for each existing rows
+    else {
+        for(let i = 0; i < numRows; i++) {
+            col.appendChild(row)
+        }
+        grid.appendChild(col)
+    }
+
+    //add col
+    numCols++
 }
 
 // Remove a row
