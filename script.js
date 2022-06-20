@@ -64,7 +64,17 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    let grid = document.getElementById('grid')
+    //get last row
+    let lastR = grid.lastElementChild
+    //remove last row
+    grid.removeChild(lastR)
+    //update row
+    numRows--;
+    //makes sure number of rows doesn't go below 0
+    if(numRows < 0) {
+        numRows = 0;
+    }
 }
 
 // Remove a column
