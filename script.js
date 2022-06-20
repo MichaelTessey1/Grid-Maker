@@ -13,7 +13,7 @@ function addR() {
 
     // Adding First box with 0 rows and 0 columns
     if(numCols === 0) {
-        row.appendChild()
+        row.appendChild(col)
         grid.appendChild(row)
 
         // update columns
