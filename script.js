@@ -13,7 +13,7 @@ function addR() {
 
     // Adding First box with 0 rows and 0 columns
     if(numCols === 0) {
-        row.appendChild(col)
+        row.appendChild(document.createElement("td"))
         grid.appendChild(row)
 
         // update columns
@@ -22,7 +22,7 @@ function addR() {
     // add corresponding rows for each existing columns
     else {
         for(let i = 0; i < numCols; i++) {
-            row.appendChild(col)
+            row.appendChild(document.createElement("td"))
         }
         grid.appendChild(row)
     }
@@ -45,7 +45,7 @@ function addC() {
 
     // Adding first box with 0 rows and 0 columns (same as row)
     if(numRows === 0) {
-        row.appendChild(col)
+        row.appendChild(document.createElement("td"))
         grid.appendChild(row)
 
         //update rows
@@ -54,7 +54,7 @@ function addC() {
     // add corresponding columnds for each existing rows
     else {
         for(let i = 0; i < numRows; i++) {
-            existingRows[i].appendChild(col)
+            existingRows[i].appendChild(document.createElement("td"))
         }
     }
 
