@@ -79,7 +79,16 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    let grid = documnet.getElementById('grid')
+    for(let i = numRows; i > 0; i--) {
+        grid.childNodes[i].removeChild(grid.childNodes[i].lastElementChild)
+    }
+    //update col
+    numCols--
+    //makes sure number of cols doesn't go below 0
+    if(numCols < 0) {
+        numCols = 0;
+    }
 }
 
 // Set global variable for selected color
