@@ -40,6 +40,9 @@ function addC() {
     let col = document.createElement("td")
     let row = document.createElement("tr")
 
+    // check for existing rows
+    let existingRows = document.querySelectorAll('tr')
+
     // Adding first box with 0 rows and 0 columns
     if(numRows === 0) {
         col.appendChild(row)
@@ -51,9 +54,8 @@ function addC() {
     // add corresponding columnds for each existing rows
     else {
         for(let i = 0; i < numRows; i++) {
-            col.appendChild(row)
+            existingRows[i].appendChild(col)
         }
-        grid.appendChild(col)
     }
 
     //add col
