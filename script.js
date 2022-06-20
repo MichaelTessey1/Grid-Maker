@@ -79,14 +79,14 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    let grid = documnet.getElementById('grid')
-    for(let i = numRows; i > 0; i--) {
+    let grid = document.getElementById('grid')
+    for(let i = numRows; i > 0; i--){
         grid.childNodes[i].removeChild(grid.childNodes[i].lastElementChild)
     }
     //update col
-    numCols--
+    numCols--;
     //makes sure number of cols doesn't go below 0
-    if(numCols < 0) {
+    if(numCols < 0){
         numCols = 0;
     }
 }
