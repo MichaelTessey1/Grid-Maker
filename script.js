@@ -16,8 +16,10 @@ function addR() {
         row.appendChild(document.createElement("td"))
         grid.appendChild(row)
 
-        // update columns
-        numCols++
+        // update columns only WHEN rows are 0
+        if(numRows === 0) {
+            numCols++
+        }
     }
     // add corresponding rows for each existing columns
     else {
@@ -48,8 +50,10 @@ function addC() {
         row.appendChild(document.createElement("td"))
         grid.appendChild(row)
 
-        //update rows
-        numRows++
+        //update rows only WHEN cols are 0
+        if(numCols === 0) {
+            numRows++
+        }
     }
     // add corresponding columnds for each existing rows
     else {
