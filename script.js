@@ -75,9 +75,10 @@ function removeR() {
     grid.removeChild(lastR)
     //update row
     numRows--;
-    //makes sure number of rows doesn't go below 0
-    if(numRows < 0) {
+    //when rows hit 0, reset everything
+    if(numRows <= 0) {
         numRows = 0;
+        numCols = 0;
     }
 }
 
@@ -89,9 +90,10 @@ function removeC() {
     }
     //update col
     numCols--;
-    //makes sure number of cols doesn't go below 0
-    if(numCols < 0){
+    //when cols hit 0, reset everything
+    if(numCols <= 0){
         numCols = 0;
+        numRows = 0;
     }
 }
 
