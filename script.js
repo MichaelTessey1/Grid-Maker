@@ -132,7 +132,11 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    // grabs all the boxes on the grid
+    let allBoxes = document.querySelectorAll("td")
+    allBoxes.forEach(box => {
+        box.style.backgroundColor = colorSelected;
+    })
 }
 
 // Clear all cells
