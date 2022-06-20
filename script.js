@@ -32,6 +32,13 @@ function addR() {
     //add row
     numRows++
 
+    //when elements are created, give them an onclick function to change its color to selected color
+    let box = document.querySelectorAll('tr td')
+    for(let i = 0; i < box.length; i++){
+        box[i].onclick = function() {
+            this.style.backgroundColor = colorSelected;
+        }
+    }
 }
 
 // Add a column
@@ -64,6 +71,14 @@ function addC() {
 
     //add col
     numCols++
+
+    //when elements are created, give them an onclick function to change its color to selected color
+    let box = document.querySelectorAll('tr td')
+    for(let i = 0; i < box.length; i++){
+        box[i].onclick = function() {
+            this.style.backgroundColor = colorSelected;
+        }
+    }
 }
 
 // Remove a row
@@ -105,7 +120,14 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    // grabs all the boxes on the grid
+    let allBoxes = document.querySelectorAll("td")
+    // for each box that doesn't have a background color, fill it with the selected color
+    allBoxes.forEach(box => {
+        if(box.style.backgroundColor === "") {
+            box.style.backgroundColor = colorSelected;
+        }
+    })
 }
 
 // Fill all cells
