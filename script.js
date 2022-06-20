@@ -43,10 +43,10 @@ function addC() {
     // check for existing rows
     let existingRows = document.querySelectorAll('tr')
 
-    // Adding first box with 0 rows and 0 columns
+    // Adding first box with 0 rows and 0 columns (same as row)
     if(numRows === 0) {
-        col.appendChild(row)
-        grid.appendChild(col)
+        row.appendChild(col)
+        grid.appendChild(row)
 
         //update rows
         numRows++
